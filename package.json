@@ -1,0 +1,35 @@
+{
+  "name": "esglobals",
+  "version": "1.0.0",
+  "description": "Finds global varialbes in JavaScript using esprima",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "peerDependencies": {
+    "esprima": "^2.4.1"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "mocha": "^2.2.5"
+  },
+  "keywords": [
+    "global",
+    "variable",
+    "leak"
+  ],
+  "author": "Josh Chisholm <joshuachisholm@gmail.com>",
+  "contributors": [],
+  "license": "MIT",
+  "files": [
+    "*.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/featurist/esglobals.git"
+  },
+  "bugs": {
+    "url": "https://github.com/featurist/esglobals/issues"
+  },
+  "homepage": "https://github.com/featurist/esglobals"
+}
