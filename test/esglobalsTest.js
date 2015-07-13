@@ -9,7 +9,7 @@ describe('esglobals(code)', function() {
     	var x = 1;
       y.doSomethingWith(function() {
         var k = 7;
-      	return z;
+      	return z.concat(arguments);
       });
       try {
         var u = false;

@@ -54,7 +54,7 @@ function extendScope(scope, extensions) {
 }
 
 function visitFunction(node, scope, globals) {
-  visit (node.body, extendScope(scope, namesOf(node.params)), globals);
+  visit (node.body, extendScope(scope, namesOf(node.params).concat('arguments')), globals);
 }
 
 function visitNode(node, scope, globals) {
