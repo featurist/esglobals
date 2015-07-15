@@ -7,9 +7,7 @@ function globalsUnder(node) {
 }
 
 function visit(node, scope, globals) {
-  if (node) {
-    visitNode(node, scope, globals);
-  }
+  if (node) { visitNode(node, scope, globals); }
 }
 
 var typeVisitors = {
@@ -32,14 +30,14 @@ var typeVisitors = {
     visitFunction(node, scope, globals);
   },
   MemberExpression: function(node, scope, globals) {
-    visitNode (node.object, scope, globals);
+    visitNode(node.object, scope, globals);
   },
   CatchClause: function(node, scope, globals) {
-    if (node.param && node.param.name instanceof String) {
-      visitNode (node.body, extendScope(scope, [node.param.name]), globals);
+    if (node.param && typeof(node.param.name) == 'string') {
+      visitNode(node.body, extendScope(scope, [node.param.name]), globals);
     }
     else {
-      visitNode (node.body, scope, globals);
+      visitNode(node.body, scope, globals);
     }
   }
 }

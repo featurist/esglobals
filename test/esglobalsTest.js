@@ -31,10 +31,15 @@ describe('esglobals(code)', function() {
         var d = r();
         var f;
       }
+      return function(fn) {
+        try { fn() }
+        catch (e) { return z + u + e.toString(); }
+        return h('.pass');
+      }
     }
 
     var globals = esglobals(example.toString());
-    expect(globals).to.eql(['y', 'z', 'p', 'q', 'k', 'm', 'd', 'f', 'r']);
+    expect(globals).to.eql(['y', 'z', 'p', 'q', 'k', 'm', 'd', 'f', 'r', 'h']);
   });
 
 });

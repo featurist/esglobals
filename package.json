@@ -1,6 +1,6 @@
 {
   "name": "esglobals",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Finds global varialbes in JavaScript using esprima",
   "main": "index.js",
   "scripts": {
